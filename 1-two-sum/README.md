@@ -39,3 +39,23 @@
 
 <p>&nbsp;</p>
 <strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face="monospace">&nbsp;</font>time complexity?
+
+## 🧠 Approach: Hash Map (Optimized)
+
+### 📌 Algorithm
+
+1. Initialize an empty `Map` to store each number and its index.
+2. Loop through the array `nums`:
+   - Calculate the **complement**: `target - nums[i]`.
+   - If the complement exists in the map, return the stored index and the current index.
+   - Otherwise, store `nums[i]` with its index in the map.
+3. Since the problem guarantees exactly one solution, a valid pair will always be found during iteration.
+
+### 🕒 Time Complexity
+
+- **O(n)** – Each element is visited once.
+
+### 📦 Space Complexity
+
+- **O(n)** – At most, all elements are stored in the hash map.
+
