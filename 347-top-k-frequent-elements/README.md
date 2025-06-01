@@ -37,3 +37,10 @@
 
 - Take the first `k` elements from the sorted array and return only their keys.
 
+### 🕒 Time Complexity
+
+- **O(n*log(n))** – Each element is visited once.
+
+### 📦 Space Complexity
+
+- **O(n)** – At most, all elements are stored in the hash map.
