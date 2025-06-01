@@ -20,3 +20,20 @@
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Your algorithm&#39;s time complexity must be better than <code>O(n log n)</code>, where n is the array&#39;s size.</p>
+
+# 🧠 Algorithm Overview
+
+## Build a frequency map
+
+- Create a `Map` to store each number and how many times it appears in the array.
+- If the number already exists, increment its count. Otherwise, initialize it with a count of `1`.
+
+## Sort the map entries by frequency
+
+- Use `map.entries()` to get `[key, value]` pairs.
+- Convert the result to an array and sort it by the value (frequency) in descending order.
+
+## Extract the top k elements
+
+- Take the first `k` elements from the sorted array and return only their keys.
+
