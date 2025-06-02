@@ -11,7 +11,7 @@ var longestConsecutive = function(nums) {
         //check if previous number is there or not
         if (!hashSet.has(num-1)) {
             let currentNum = num;
-            currentLength = 1;
+            let currentLength = 1;
 
             while (hashSet.has(currentNum+1)) {
                 currentLength+=1;
