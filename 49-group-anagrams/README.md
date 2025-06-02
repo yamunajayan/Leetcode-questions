@@ -42,8 +42,21 @@
 	<li><code>strs[i]</code> consists of lowercase English letters.</li>
 </ul>
 
+## 🧠 Approach: hashMap with sort
+### 📌 Algorithm
 
-## 5. Group anagrams - hashMap with sort
-create hashMap and sort and 
-- const sortedStr = str.split('').sort().join('');
-- return Array.from(hashMap.values())
+1. Initialize an empty `Map` to store sorted word as key and each entry in an array as value.
+2. Loop through the array `strs`:
+   - find const sortedStr = str.split('').sort().join('');.
+   - If the sortedStr exists in the map, add the new str in the value.
+   - Otherwise, create new entry.
+3. return Array.from(hashMap.values()).
+
+### 🕒 Time Complexity
+
+- **O(nlog(n)** – Each element is visited once.
+
+### 📦 Space Complexity
+
+- **O(n)** – At most, all elements are stored in the hash map.
+
