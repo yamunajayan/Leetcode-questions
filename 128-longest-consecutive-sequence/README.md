@@ -32,3 +32,19 @@
 	<li><code>0 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
+
+## 🧠 Approach: Hash Set (Optimized)
+### 📌 Algorithm
+1. Create a HashSet from the array for O(1) lookups.
+2. Loop through the HashSet:
+
+  - Check if (num - 1) exists in the set.
+	- If not, this is the start of a consecutive sequence.
+	- Use a while loop to count consecutive numbers forward (num + 1, num + 2, etc.).
+	- Track the maximum sequence length found.
+
+  - Return the maximum sequence length.
+### 🕒 Time Complexity
+- O(n) – Each element is visited once.
+### 📦 Space Complexity
+- O(n) – At most, all elements are stored in the hash map.
