@@ -4,16 +4,15 @@
  */
 var groupAnagrams = function(strs) {
     //hashMap
-    const hashMap = new Map();
-
-    strs.forEach(str => {
-        const sortedStr = str.split('').sort().join('');
-        if(hashMap.has(sortedStr)) {
-            hashMap.get(sortedStr).push(str)
-        } else {
-            hashMap.set(sortedStr, [str])
+    let map = new Map();
+    for (let str of strs) {
+        let chars = Array.from(str);
+        chars.sort();
+        let key = chars.join("");
+        if(!map.has(key)) {
+            map.set(key, []);
         }
-    })
-    
-    return Array.from(hashMap.values())  
+        map.get(key).push(str);
+    }
+    return Array.from(map.values()); 
 };
