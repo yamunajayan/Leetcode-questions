@@ -15,3 +15,8 @@ Use a hash map to count frequency of each element, then sort by frequency and re
 ## 4. Longest consequtive number without sorting :- Hashset approach 
 Use hashset, loop through set and check if (num-1) not exists then start count and add while loop 
 
+## 5. Group anagrams - hashMap with sort
+create hashMap and sort and 
+- const sortedStr = str.split('').sort().join('');
+- return Array.from(hashMap.values())
+
