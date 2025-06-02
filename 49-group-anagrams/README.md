@@ -41,3 +41,9 @@
 	<li><code>0 &lt;= strs[i].length &lt;= 100</code></li>
 	<li><code>strs[i]</code> consists of lowercase English letters.</li>
 </ul>
+
+
+## 5. Group anagrams - hashMap with sort
+create hashMap and sort and 
+- const sortedStr = str.split('').sort().join('');
+- return Array.from(hashMap.values())
