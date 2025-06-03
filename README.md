@@ -20,3 +20,9 @@ create hashMap and sort and
 - const sortedStr = str.split('').sort().join('');
 - return Array.from(hashMap.values())
 
+## 6. Two sum sorted - (left and right pointer) just increment and decrement by 1
+
+
+## 7. 3Sum - Sorting + 2 pointer (left, right)
+
+## 8. Container With Most Water - 2 pointer
