@@ -25,11 +25,10 @@ var threeSum = function(nums) {
                 left ++;
             } else {
                 result.push([nums[i],nums[left],nums[right]]);
-                while (left < right && nums[left] === nums[left + 1]) left++;
+                
                 // Skip duplicate right values
-                while (left < right && nums[right] === nums[right - 1]) right--;
                 left++;
-                right--;
+                while (left < right && nums[left] === nums[left - 1]) left++;
             }
         }
     }
