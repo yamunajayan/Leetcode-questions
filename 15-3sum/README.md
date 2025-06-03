@@ -39,3 +39,38 @@ Notice that the order of the output and the order of the triplets does not matte
 	<li><code>3 &lt;= nums.length &lt;= 3000</code></li>
 	<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
+
+## 🧠 Approach: Approach: Two Pointers After Sorting
+
+### 📌 Algorithm
+
+1. Sort the array nums in ascending order.
+2. Loop through the array using index i::
+	- If nums[i] === nums[i - 1], skip to avoid duplicate triplets.
+	- Initialize two pointers:
+	- left = i + 1, right = nums.length - 1
+
+	- While left < right:
+
+		- Compute the sum: nums[i] + nums[left] + nums[right].
+
+		- If the sum is 0, you've found a valid triplet:
+
+			- Add [nums[i], nums[left], nums[right]] to the result.
+
+			- Skip over any duplicate values for nums[left] and nums[right].
+
+			- Move both pointers inward.
+
+		- If the sum is less than 0, move left to the right.
+
+		- If the sum is greater than 0, move right to the left.
+3. Return result.
+
+### 🕒 Time Complexity
+
+- **O(n2)** – Each element is visited once.
+
+### 📦 Space Complexity
+
+- **O(1)** – At most, all elements are stored in the hash map.
