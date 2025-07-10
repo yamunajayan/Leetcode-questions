@@ -11,35 +11,22 @@
  * @return {ListNode}
  */
 var removeNthFromEnd = function(head, n) {
-    //First find length of the list
-    let count;
+    let dummy = new ListNode();
+    dummy.next = head;
 
-    if(!head) return;
+    let first=dummy, second=dummy;
 
-    if (head) count = 1;
-
-    let tail = head;
-
-    while (tail.next) {
-        count++;
-        tail = tail.next;
+    //Move n+1 places for first 
+    for(let i=0; i<=n; i++) {
+        first = first.next;
     }
 
-    if (count<n) return;
-    if (n === count) return head.next;
-
-    let dummy = head;
-
-    for(let i=1; i<count-n; i++) {
-        dummy = dummy.next
+    //Move first till it hits null
+    while (first) {
+        first = first.next;
+        second = second.next;
     }
 
-    if (dummy.next) {
-        dummy.next = dummy.next.next;
-    } else {
-        dummy.next = null;
-    }
-
-    return head
-   
+    second.next = second.next.next;
+    return dummy.next;   
 };
