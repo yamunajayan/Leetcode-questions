@@ -26,3 +26,15 @@ create hashMap and sort and
 ## 7. 3Sum - Sorting + 2 pointer (left, right)
 
 ## 8. Container With Most Water - 2 pointer
+
+## 9. Remove the N-th node from the end:
+- Create a dummy node that points to head
+- Initialize first = dummy, second = dummy
+
+- Move first ahead by n + 1 steps
+
+- While first, move both first and second one step
+
+- Do: second.next = second.next.next to remove the node
+
+- Return: return dummy.next
