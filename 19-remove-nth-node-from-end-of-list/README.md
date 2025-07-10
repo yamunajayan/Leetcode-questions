@@ -34,3 +34,31 @@
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Could you do this in one pass?</p>
+
+
+## 🧠 Approach: Two Pointers with Dummy Node
+
+### 📌 Algorithm
+
+1. Create a dummy node that points to the head of the list.  
+   - `const dummy = new ListNode(0);`  
+   - `dummy.next = head;`
+2. Initialize two pointers:  
+   - `first = dummy`  
+   - `second = dummy`
+3. Move `first` ahead by `n + 1` steps.
+4. While `first` is not null:  
+   - Move both `first` and `second` one step forward.
+5. After loop ends, `second.next` is the node to remove:  
+   - `second.next = second.next.next`
+6. Return the new head:  
+   - `return dummy.next`
+
+### 🕒 Time Complexity
+
+- **O(n)** – Single pass through the list.
+
+### 📦 Space Complexity
+
+- **O(1)** – Only constant extra space for pointers.
+
