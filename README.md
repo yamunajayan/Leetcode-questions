@@ -34,3 +34,14 @@ create hashMap and sort and
 - While first, move both first and second one step
 - Do: second.next = second.next.next to remove the node
 - Return: return dummy.next
+
+  ## 10. Merge 2 sorted LinkedList
+  - Create dummy node and tail
+  - Loop through List1 && List2
+    - if list1.val <= list2.val
+        -- tail.next = list1
+        -- list1 increment
+    - else
+      -- tail.next = list2
+      -- list2 increment
+   - Return: return dummy.next 
