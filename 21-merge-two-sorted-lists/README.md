@@ -34,3 +34,30 @@
 	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 	<li>Both <code>list1</code> and <code>list2</code> are sorted in <strong>non-decreasing</strong> order.</li>
 </ul>
+
+
+## 🧠 Approach: Merge two two sorted array
+
+### 📌 Algorithm
+
+1. Create a dummy node that points to the head of the list.  
+   - `const dummy = new ListNode(0);`  
+   - tail = dummy
+2. Loop through list1 and list2
+    - if list1.val <= list2.val
+       -- tail.next = list1
+       -- list1= list1.next
+   - else
+     -- tail.next = list2
+     -- list2 = list2.next
+3. Add remaining list2 or list1 to tail (tail.next = list1/list2)
+4. return dummy.next
+
+
+### 🕒 Time Complexity
+
+- **O(n)** – Single pass through the list.
+
+### 📦 Space Complexity
+
+- **O(1)** – Only constant extra space for pointers.
