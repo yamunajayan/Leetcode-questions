@@ -49,10 +49,10 @@ create hashMap and sort and
 ## 11. Merge k sorted LinkedList 
  - Remove edge cases lists null and length 0
  - Loop through lists.length >1
-   -- initiate mergeLists = []
-   -- loop through lists, with i increment by 2
-         --- l1 = lists[i]
-         --- l2 = lists[i+1] (i+1 < lists.length) else null
-         --- call Merge 2 sorted LinkedList, and append it to mergeLists
-    -- make lists= mergeLists
+   - initiate mergeLists = []
+   - loop through lists, with i increment by 2
+     - l1 = lists[i]
+     - l2 = lists[i+1] (i+1 < lists.length) else null
+     - call Merge 2 sorted LinkedList, and append it to mergeLists
+    - make lists= mergeLists
 - return lists[0]
