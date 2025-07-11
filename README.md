@@ -35,7 +35,7 @@ create hashMap and sort and
 - Do: second.next = second.next.next to remove the node
 - Return: return dummy.next
 
-  ## 10. Merge 2 sorted LinkedList
+## 10. Merge 2 sorted LinkedList
   - Create dummy node and tail
   - Loop through List1 && List2
     - if list1.val <= list2.val
