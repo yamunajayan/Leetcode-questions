@@ -8,9 +8,8 @@ var containsDuplicate = function(nums) {
     for (let i=0; i<nums.length; i++) {
         if (hashMap.has(nums[i])) {
             return true;
-        } else {
-            hashMap.set(nums[i], 1)
-        }
+        } 
+        hashMap.set(nums[i], 1)
     }
 
     return false
