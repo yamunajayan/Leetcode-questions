@@ -2,12 +2,29 @@
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> nums = [1,1,1,2,2,3], k = 2
-<strong>Output:</strong> [1,2]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> nums = [1], k = 1
-<strong>Output:</strong> [1]
-</pre>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">nums = [1,1,1,2,2,3], k = 2</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">[1,2]</span></p>
+</div>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">nums = [1], k = 1</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">[1]</span></p>
+</div>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">nums = [1,2,1,2,1,2,3,1,3,2], k = 2</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">[1,2]</span></p>
+</div>
+
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
@@ -20,27 +37,3 @@
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Your algorithm&#39;s time complexity must be better than <code>O(n log n)</code>, where n is the array&#39;s size.</p>
-
-# 🧠 Algorithm Overview
-
-## Build a frequency map
-
-- Create a `Map` to store each number and how many times it appears in the array.
-- If the number already exists, increment its count. Otherwise, initialize it with a count of `1`.
-
-## Sort the map entries by frequency
-
-- Use `map.entries()` to get `[key, value]` pairs.
-- Convert the result to an array and sort it by the value (frequency) in descending order.
-
-## Extract the top k elements
-
-- Take the first `k` elements from the sorted array and return only their keys.
-
-### 🕒 Time Complexity
-
-- **O(n*log(n))** – Each element is visited once.
-
-### 📦 Space Complexity
-
-- **O(n)** – At most, all elements are stored in the hash map.
