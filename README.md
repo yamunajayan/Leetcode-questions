@@ -11,6 +11,7 @@ Avoids division.
 
 ## 3. Top K Frequent Elements - <span style="color: orange;">Hash Map + Sort Approach</span>
 Use a hash map to count frequency of each element, then sort by frequency and return the top `k` values.
+let sortedByValue = new Map([...map.entries()].sort((a, b) => a[1] - b[1]));
 
 ## 4. Longest consequtive number without sorting :- Hashset approach 
 Use hashset, loop through set and check if (num-1) not exists then start count and add while loop 
