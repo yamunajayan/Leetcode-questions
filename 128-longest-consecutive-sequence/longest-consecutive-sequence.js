@@ -5,13 +5,8 @@
 var longestConsecutive = function(nums) {
     //hashMap
 
-    let hashSet = new Set();
+    let hashSet = new Set(nums);
 
-    nums.forEach(num => {
-        if(!hashSet.has(num)) {
-            hashSet.add(num)
-        }
-    })
 
     let maxCount = 0;
     
