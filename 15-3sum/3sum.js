@@ -3,36 +3,33 @@
  * @return {number[][]}
  */
 var threeSum = function(nums) {
-    let result = []
+    let result = [];
 
-    nums.sort((a,b) => a-b);
-    
-//     console.log(nums);
-    
-    for(let i=0; i<nums.length; i++) {
-        if(nums[i] === nums[i-1]) continue;
-        
-//         console.log("num", nums[i]);
-        
-        let left=i+1, right=nums.length-1;
-        
-        while(left<right){
-            let currentSum = nums[i] + nums[left] + nums[right];
-//             console.log("sum", currentSum, "right", nums[right], "left", nums[left]);
-            if (currentSum>0) {
-                right--;
-            } else if (currentSum<0) {
-                left ++;
-            } else {
-                result.push([nums[i],nums[left],nums[right]]);
+    let sortedNums = nums.sort((a,b) => a-b);
+
+    for (let i=0; i<sortedNums.length; i++) {
+        if (sortedNums[i] !== sortedNums[i-1]) {
+            let left = i+1, right = sortedNums.length-1;
+            while(left<right) {
+                let sum = sortedNums[i] + sortedNums[left] + sortedNums[right]
+                if (sum === 0) {
+                    result.push([sortedNums[i], sortedNums[left], sortedNums[right]]);
+                    left++;
+                    right--;
+                    while (left<right && sortedNums[left] === sortedNums[left-1]) left++;
+                    while (left<right && sortedNums[right] === sortedNums[right+1]) right--;
+                } else if(sum<0) {
+                    left++
+                } else {
+                    right--;
+                }
                 
-                // Skip duplicate right values
-                left++;
-                while (left < right && nums[left] === nums[left - 1]) left++;
             }
-        }
+          
+        } 
     }
-    
+
     return result;
+
     
 };
