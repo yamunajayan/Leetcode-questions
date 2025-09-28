@@ -7,20 +7,19 @@ var maxArea = function(height) {
     //subtract nums * right-left
     //store max value
 
-    let maxArea = 0;
+    let maxValue = 0;
 
-    let left=0, right = height.length-1;
-    
-    while (left<right) {
-        let currentArea = Math.min(height[right], height[left])*(right-left);
-        maxArea = Math.max(currentArea, maxArea);
-        if (height[left]<=height[right]) {
+    let left=0, right=height.length-1;
+
+    while(left<right) {
+        let containerSize = (right-left)* Math.min(height[right],height[left]);
+        maxValue = Math.max(containerSize, maxValue);
+        if (height[left] < height[right]) {
             left++;
         } else {
-            right--
+            right--;
         }
     }
 
-    return maxArea;
-    
+    return maxValue;
 };
