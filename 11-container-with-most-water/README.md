@@ -30,32 +30,3 @@
 	<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>
 	<li><code>0 &lt;= height[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
-
-
-## 🧠 Approach: Approach: Two Pointers
-
-### 📌 Algorithm
-
-
-1. Initialize two pointers: left = i + 1, right = nums.length - 1
-
-2. While left < right:
-
-	- Calculate the area using: area = Math.min(height[left], height[right]) × (right - left)
-
-	- Update maxArea if the current area is greater.
-
-	- Move the pointer that points to the shorter line:
-
-			- If height[left] <= height[right], increment left.
-
-			- Otherwise, decrement right.
-3.Return the maxArea after the loop finishes.
-
-### 🕒 Time Complexity
-
-- **O(n)** – Each element is visited once.
-
-### 📦 Space Complexity
-
-- **O(1)** – At most, all elements are stored in the hash map.
