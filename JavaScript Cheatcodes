@@ -1,1 +1,15 @@
 JS cheat codes
+
+
+Array 
+1) slice(start, end) → non-mutating
+     arr.slice(1, 4); // [index 1,2,3]
+      arr.slice();    // copy array
+
+2) splice(start, deleteCount, ...items) → mutates
+  The splice() method of Array instances changes the contents of an array by removing or replacing
+  existing elements and/or adding new elements in place
+
+    arr.splice(2, 1);        // remove 1 element at index 2
+    arr.splice(2, 0, 10);   // insert 10 at index 2
+    arr.splice(1, 2, 5, 6); // replace 2 elements at 3
