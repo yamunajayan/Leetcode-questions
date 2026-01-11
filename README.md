@@ -1,12 +1,12 @@
 # Algorithm Problems Solutions
 
 
-## If array + target → HashMap
-## If substring / subarray → Sliding Window
-## If brackets → Stack
-## If tree → DFS first
-## If “max/min contiguous” → Kadane
-## If sorted → Binary Search
+### If array + target → HashMap
+### If substring / subarray → Sliding Window
+### If brackets → Stack
+### If tree → DFS first
+### If “max/min contiguous” → Kadane
+### If sorted → Binary Search
 
 ## 1. Two Sum - <span style="color: teal;">Hash Map Approach</span>
 Uses a hash map to track values and their indices as you iterate. For each value, check if the complement (`target - current`) exists in the map.
