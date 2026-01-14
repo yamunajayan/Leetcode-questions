@@ -11,7 +11,7 @@ var isValidSudoku = function(board) {
 
     for (let r=0; r<9; r++) {
         for (let c=0; c<9; c++) {
-                        let value = board[r][c];
+            let value = board[r][c];
             if (value === ".") continue;
             
             if (value>9 || value <1) return false;
@@ -23,8 +23,6 @@ var isValidSudoku = function(board) {
             boxes[boxIndex].add(value);
         }
     }
-    
-
-    
+        
     return true; 
 };
