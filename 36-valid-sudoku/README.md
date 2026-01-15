@@ -55,3 +55,13 @@
 	<li><code>board[i].length == 9</code></li>
 	<li><code>board[i][j]</code> is a digit <code>1-9</code> or <code>&#39;.&#39;</code>.</li>
 </ul>
+
+# Solution
+## 12. Find if Sudoku is valid 
+  - Uses arrays of sets (length 9) to track seen numbers for rows, columns, and boxes efficiently.
+  - Iterates through the board (two for loops, r and c),
+     - skipping empty cells,
+     - find boxIndex = Math.floor(r/3)*3+ Math.floor(c/3)
+     - checking validity, and returning false if any rule is violated;
+     - add board[r][c] to row, column, boxes array
+  -otherwise returns true.
